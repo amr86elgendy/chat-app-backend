@@ -5,10 +5,10 @@ const { createServer } = require('http');
 const { execute, subscribe } = require('graphql');
 const { SubscriptionServer } = require('subscriptions-transport-ws');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
-const { middlewareQM, middlewareSub } = require('./backend/middleware');
-const connectDb = require('./backend/config/db');
-const typeDefs = require('./backend/graphql/typeDefs');
-const resolvers = require('./backend/graphql/resolvers');
+const { middlewareQM, middlewareSub } = require('./middleware');
+const connectDb = require('./config/db');
+const typeDefs = require('./graphql/typeDefs');
+const resolvers = require('./graphql/resolvers');
 
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
